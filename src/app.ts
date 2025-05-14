@@ -1,7 +1,12 @@
 import express from 'express';
+import { initDB } from './database/postgres';
 
-const app = express();
+(async () => {
+    await initDB();
 
-app.listen(3000, () => {
-    console.log('Server started at port: 3000');
-});
+    const app = express();
+
+    app.listen(3000, () => {
+        console.log('Server started at port: 3000');
+    });
+})();
