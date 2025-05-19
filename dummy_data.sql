@@ -1,6 +1,5 @@
 INSERT INTO products (id, price, name, category, available_items)
- VALUES (2, 50.66, 'product two', 'category two', 3),
-(3, 19.99, 'product three', 'category one', 5),
+ VALUES (3, 19.99, 'product three', 'category one', 5),
 (4, 29.49, 'product four', 'category two', 8),
 (5, 15.75, 'product five', 'category three', 2),
 (6, 12.00, 'product six', 'category four', 7),
