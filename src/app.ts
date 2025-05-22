@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import { initDB } from './database/postgres';
 import { initRedis } from './database/redis';
 import { getProducts, getProductsById } from './Controllers/productController';
+import { DateTime } from 'luxon';
 
 (async () => {
     await initDB();
@@ -13,7 +14,8 @@ import { getProducts, getProductsById } from './Controllers/productController';
 
     const requestLogger: express.RequestHandler = (req, _res, next) => {
         console.log(
-            req.method, req.path, " Body- ", req.body, " Params- ", req.params, "-", Date());
+            req.method, req.path, " Body- ", req.body, " Params- ", req.params, "-",
+                DateTime.now().toISO());
         next();
     }
 

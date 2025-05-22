@@ -19,8 +19,10 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
+    "@types/luxon": "^3.6.2",
     "@types/pg": "^8.15.1",
     "@types/redis": "^4.0.11",
+    "luxon": "^3.6.1",
     "nodemon": "^3.1.10"
   }
 }
